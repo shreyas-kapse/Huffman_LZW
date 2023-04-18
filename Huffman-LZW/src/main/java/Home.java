@@ -26,6 +26,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import javax.swing.ButtonGroup;
 
 public class Home extends JFrame {
 
@@ -67,7 +68,9 @@ public class Home extends JFrame {
 	JLabel lblNewLabel_5_1;
 	JLabel lblNewLabel_4_1;
 	JLabel lblNewLabel_6_1;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 	public Home() {
+		setTitle("Huffman Encoding Project");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1166, 768);
 		contentPane = new JPanel();
@@ -89,6 +92,7 @@ public class Home extends JFrame {
 	
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Compress a file using Huffman encoding\r\n    ");
+		buttonGroup.add(rdbtnNewRadioButton);
 		sl_panel.putConstraint(SpringLayout.NORTH, rdbtnNewRadioButton, 10, SpringLayout.NORTH, panel);
 		sl_panel.putConstraint(SpringLayout.WEST, rdbtnNewRadioButton, 10, SpringLayout.WEST, panel);
 		sl_panel.putConstraint(SpringLayout.SOUTH, rdbtnNewRadioButton, 44, SpringLayout.NORTH, panel);
@@ -96,12 +100,14 @@ public class Home extends JFrame {
 		panel.add(rdbtnNewRadioButton);
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton(" Decompress a file using Huffman decoding");
+		buttonGroup.add(rdbtnNewRadioButton_1);
 		sl_panel.putConstraint(SpringLayout.WEST, rdbtnNewRadioButton_1, 0, SpringLayout.WEST, rdbtnNewRadioButton);
 		sl_panel.putConstraint(SpringLayout.SOUTH, rdbtnNewRadioButton_1, -138, SpringLayout.SOUTH, panel);
 		sl_panel.putConstraint(SpringLayout.EAST, rdbtnNewRadioButton_1, -10, SpringLayout.EAST, panel);
 		panel.add(rdbtnNewRadioButton_1);
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Compress a file using Lempel-Ziv-Welch encoding\r\n");
+		buttonGroup.add(rdbtnNewRadioButton_2);
 		sl_panel.putConstraint(SpringLayout.NORTH, rdbtnNewRadioButton_1, 6, SpringLayout.SOUTH, rdbtnNewRadioButton_2);
 		sl_panel.putConstraint(SpringLayout.NORTH, rdbtnNewRadioButton_2, 6, SpringLayout.SOUTH, rdbtnNewRadioButton);
 		sl_panel.putConstraint(SpringLayout.WEST, rdbtnNewRadioButton_2, 0, SpringLayout.WEST, rdbtnNewRadioButton);
@@ -110,6 +116,7 @@ public class Home extends JFrame {
 		panel.add(rdbtnNewRadioButton_2);
 		
 		JRadioButton rdbtnNewRadioButton_1_1 = new JRadioButton("Decompress a file using Lempel-Ziv-Welch decoding");
+		buttonGroup.add(rdbtnNewRadioButton_1_1);
 		sl_panel.putConstraint(SpringLayout.NORTH, rdbtnNewRadioButton_1_1, 6, SpringLayout.SOUTH, rdbtnNewRadioButton_1);
 		sl_panel.putConstraint(SpringLayout.WEST, rdbtnNewRadioButton_1_1, 0, SpringLayout.WEST, rdbtnNewRadioButton);
 		sl_panel.putConstraint(SpringLayout.SOUTH, rdbtnNewRadioButton_1_1, -98, SpringLayout.SOUTH, panel);
@@ -117,6 +124,7 @@ public class Home extends JFrame {
 		panel.add(rdbtnNewRadioButton_1_1);
 		
 		JRadioButton rdbtnNewRadioButton_1_2 = new JRadioButton("Performance tests");
+		buttonGroup.add(rdbtnNewRadioButton_1_2);
 		sl_panel.putConstraint(SpringLayout.NORTH, rdbtnNewRadioButton_1_2, 6, SpringLayout.SOUTH, rdbtnNewRadioButton_1_1);
 		sl_panel.putConstraint(SpringLayout.WEST, rdbtnNewRadioButton_1_2, 10, SpringLayout.WEST, panel);
 		sl_panel.putConstraint(SpringLayout.SOUTH, rdbtnNewRadioButton_1_2, -58, SpringLayout.SOUTH, panel);
@@ -206,48 +214,48 @@ public class Home extends JFrame {
 		lblNewLabel_2.setBounds(21, 130, 98, 38);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("huffman Performance");
+		JLabel lblNewLabel_3 = new JLabel("Huffman Performance");
 		lblNewLabel_3.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblNewLabel_3.setBounds(21, 460, 152, 38);
 		contentPane.add(lblNewLabel_3);
 		
-		lblNewLabel_4 = new JLabel("a");
+		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setBounds(183, 474, 334, 13);
 		contentPane.add(lblNewLabel_4);
 		
-		lblNewLabel_5 = new JLabel("b");
+		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setBounds(183, 497, 334, 13);
 		contentPane.add(lblNewLabel_5);
 		
-		lblNewLabel_6 = new JLabel("c");
+		lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setBounds(183, 530, 334, 13);
 		contentPane.add(lblNewLabel_6);
 		
-		lblNewLabel_7 = new JLabel("d");
+		lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setBounds(183, 561, 334, 13);
 		contentPane.add(lblNewLabel_7);
 		
-		lblNewLabel_8 = new JLabel("e");
+		lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setBounds(183, 584, 334, 13);
 		contentPane.add(lblNewLabel_8);
 		
-		lblNewLabel_8_1 = new JLabel("e");
+		lblNewLabel_8_1 = new JLabel("");
 		lblNewLabel_8_1.setBounds(737, 584, 334, 13);
 		contentPane.add(lblNewLabel_8_1);
 		
-		lblNewLabel_7_1 = new JLabel("d");
+		lblNewLabel_7_1 = new JLabel("");
 		lblNewLabel_7_1.setBounds(737, 561, 334, 13);
 		contentPane.add(lblNewLabel_7_1);
 		
-		lblNewLabel_6_1 = new JLabel("c");
+		lblNewLabel_6_1 = new JLabel("");
 		lblNewLabel_6_1.setBounds(737, 530, 334, 13);
 		contentPane.add(lblNewLabel_6_1);
 		
-		lblNewLabel_5_1 = new JLabel("b");
+		lblNewLabel_5_1 = new JLabel("");
 		lblNewLabel_5_1.setBounds(737, 497, 334, 13);
 		contentPane.add(lblNewLabel_5_1);
 		
-		lblNewLabel_4_1 = new JLabel("a");
+		lblNewLabel_4_1 = new JLabel("");
 		lblNewLabel_4_1.setBounds(737, 474, 334, 13);
 		contentPane.add(lblNewLabel_4_1);
 		
@@ -264,6 +272,16 @@ public class Home extends JFrame {
 		og_file_size_txt.setText("");
 		compress_file_size_txt.setText("");
 		compressed_file_txt.setText("");
+		lblNewLabel_5.setText("");;
+		lblNewLabel_4.setText("");
+		lblNewLabel_6.setText("");
+		lblNewLabel_7.setText("");;
+		lblNewLabel_8.setText("");;
+		lblNewLabel_8_1.setText("");;
+		lblNewLabel_7_1.setText("");
+		lblNewLabel_5_1.setText("");
+		lblNewLabel_4_1.setText("");
+		lblNewLabel_6_1.setText("");
 	}
 	 public void huffmanEncode() {
 	        System.out.print("\nName of the file to compress: ");
